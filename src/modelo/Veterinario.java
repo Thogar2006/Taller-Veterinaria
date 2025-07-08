@@ -24,6 +24,7 @@ public class Veterinario {
     public String getEspecialidad() {
         return especialidad;
     }
+    
 }
 
     

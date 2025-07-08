@@ -22,23 +22,27 @@ public class Mascota {
         this.nombre = nombre;
         this.especie = especie;
 //        this.edad = edad;
-        this.consultas = new ArrayList<>();   
+        this.consultas = new ArrayList<>();
+        setEdad(edad);
     }
     
     //Expesion de que no puede ser una edad negativa
     public void setEdad(int edad) {
         if (edad < 0) {
-            throw new IllegalArgumentException("La edad no puede ser negativa");
+            System.out.println("Edad no válida. Se asignará 0 por defecto.");
+            this.edad = 0;
+        } else {
+            this.edad = edad;
         }
-        this.edad = edad;
     }
-
+    
+    
     public void agregarConsulta(Consulta consulta) {
         consultas.add(consulta);
     }
 
     public void mostrarHistorial() {
-        System.out.println("📋 Mascota: " + nombre + " | Especie: " + especie + " | Edad: " + edad + " años");
+        System.out.println("Mascota: " + nombre + " | Especie: " + especie + " | Edad: " + edad + " años");
         System.out.println("Historial de consultas:");
         for (int i = 0; i < consultas.size(); i++) {
             consultas.get(i).mostrarDetalleConsulta();

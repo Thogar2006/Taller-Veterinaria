@@ -65,8 +65,8 @@ public class TallerVeterinaria {
 //              String fecha = sc.nextLine();
 //              sc.nextLine();
 
-                System.out.print("  Fecha (YYYY-MM-DD): ");
-                LocalDate fecha = LocalDate.parse(sc.nextLine());
+//                System.out.print("  Fecha (YYYY-MM-DD): ");
+//                LocalDate fecha = LocalDate.parse(sc.nextLine());
 
                 System.out.print("  Nombre del veterinario: ");
                 String nombreVet = sc.nextLine();
@@ -75,7 +75,7 @@ public class TallerVeterinaria {
                 String especialidad = sc.nextLine();
 
                 Veterinario vet = new Veterinario(nombreVet, especialidad);
-                Consulta consulta = new Consulta(codigo, fecha, vet);
+                Consulta consulta = new Consulta(codigo, vet);
                 mascota.agregarConsulta(consulta);
             }
 

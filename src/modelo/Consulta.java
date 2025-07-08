@@ -17,12 +17,15 @@ public class Consulta {
       private Veterinario veterinario;
       
       
-    public Consulta(String codigo, LocalDate fecha, Veterinario veterinario) {
-        if (fecha.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("La fecha no puede ser futura"); // expecion de no ser una fecha futura
-        }
+    public Consulta(String codigo, Veterinario veterinario) {
+//        if (fecha.isAfter(LocalDate.now())) {
+//            System.out.println("Fecha futura detectada. Se usará la fecha actual.");
+//            this.fecha = LocalDate.now();
+//        } else {
+//            this.fecha = fecha;
+//        }
+        this.fecha = LocalDate.now();
         this.codigo = codigo;
-        this.fecha = fecha;
         this.veterinario = veterinario;
     }
     //Metodos de acceso nesesarios
