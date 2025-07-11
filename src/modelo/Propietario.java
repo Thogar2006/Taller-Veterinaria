@@ -29,18 +29,18 @@ public class Propietario {
         mascotas.add(mascota);
     }
 
-    public void mostrarInformacionCompleta() {
-        System.out.println("===== FICHA CLÍNICA =====");
-        System.out.println("Propietario: " + nombre);
-        System.out.println("Documento: " + documento);
-        System.out.println("Teléfono: " + telefono);
-        System.out.println();
-
-        for (int i = 0; i < mascotas.size(); i++) {
-            mascotas.get(i).mostrarHistorial();
-            System.out.println();
-        }
-    }
+//    public void mostrarInformacionCompleta() {
+//        System.out.println("===== FICHA CLÍNICA =====");
+//        System.out.println("Propietario: " + nombre);
+//        System.out.println("Documento: " + documento);
+//        System.out.println("Teléfono: " + telefono);
+//        System.out.println();
+//
+//        for (int i = 0; i < mascotas.size(); i++) {
+//            mascotas.get(i).mostrarHistorial();
+//            System.out.println();
+//        }
+//    }
     
     // Métodos de acceso agregados
     public String getNombre() {
